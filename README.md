@@ -65,7 +65,7 @@ The Getfeatures() function generates a list of 12 numerical features from each p
 
 Here, roundness is calculated as:\
 <img width="186" height="76" alt="Screenshot 2026-10-18 at 9 39 25 PM" src="https://github.com/user-attachments/assets/a4efe2ff-1672-4f01-ac18-929d9d0aee1d" />\
-Where A is the contour’s area and P is its perimeter. The closer the shape is to a circle, the more the roundness value approaches 1.
+Where A is the contour’s area, and P is its perimeter. The closer the shape is to a circle, the more the roundness value approaches 1.
 
 Aspect ratio is calculated as:\
 <img width="123" height="86" alt="Screenshot 2026-10-18 at 9 40 10 PM" src="https://github.com/user-attachments/assets/b744fe3c-01f9-4182-a397-eacfd8d4b987" />\
@@ -73,7 +73,7 @@ Where W and H are the width and height of the contour’s bounding rectangle.
 
 These features represent different visual properties that may help distinguish barnacles from their surroundings. Barnacles have visible rims and a distinct shape. The background may differ in brightness and color, among others.
 
-The program trains a Random Forest Classifier using a 100 decision trees. Random Forest combines the predictions of multiple decision trees to classify a patch based on the patch’s extracted features. The class_weight="balanced" setting adjusts class weights based on their frequencies and random_state=7 makes the model’s results reproducible.
+The program trains a Random Forest Classifier using 100 decision trees. Random Forest combines the predictions of multiple decision trees to classify a patch based on the patch’s extracted features. The class_weight="balanced" setting adjusts class weights based on their frequencies, and random_state=7 makes the model’s results reproducible.
 
 The model is trained using patches from the first photograph. It then predicts the labels of patches sampled from the second photograph. Finally, the program calculates accuracy, precision, recall, F1 score, and a confusion matrix.
 
@@ -81,6 +81,16 @@ The visualize_patches() function overlays rectangles on the original images. Gre
 <img width="500" height="500" alt="Screenshot 2026-10-18 at 8 04 41 PM" src="https://github.com/user-attachments/assets/eb09df24-406b-4400-aea6-459d4975c4f9" />
 <img width="500" height="500" alt="Screenshot 2026-10-18 at 8 03 54 PM" src="https://github.com/user-attachments/assets/abd9d468-70b3-40e8-9801-330c2ea590d0" />
 
+## Analyzing Model Performance
+After testing the model on image 2, the following metrics were generated:
+
+Accuracy: 71%
+Precision: 75%
+Recall: 62%
+F1 Score: 68%
+Predicted barnacle patches: 322  
+
+Since the metrics depend on the user-selected region of interest, they may vary slightly in each run. The above metrics are reported based on the best-performing run.
 
 
 
