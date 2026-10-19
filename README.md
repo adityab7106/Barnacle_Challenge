@@ -79,7 +79,7 @@ The model is trained using patches from the first photograph. It then predicts t
 
 The visualize_patches() function overlays rectangles on the original images. Green rectangles identify positive patches, while red rectangles identify negative patches. This allows me to analyze the data and ensure the model is being trained on the correct examples. Since a classifier’s performance depends heavily on the quality of the training data, visualization is an important step.
 <img width="500" height="500" alt="Screenshot 2026-10-18 at 8 04 41 PM" src="https://github.com/user-attachments/assets/eb09df24-406b-4400-aea6-459d4975c4f9" />
-<img width="1031" height="776" alt="Screenshot 2026-10-18 at 8 03 54 PM" src="https://github.com/user-attachments/assets/abd9d468-70b3-40e8-9801-330c2ea590d0" />
+<img width="500" height="500" alt="Screenshot 2026-10-18 at 8 03 54 PM" src="https://github.com/user-attachments/assets/abd9d468-70b3-40e8-9801-330c2ea590d0" />
 
 
 
