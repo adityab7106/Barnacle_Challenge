@@ -67,8 +67,8 @@ Here, roundness is calculated as:
 <img width="186" height="76" alt="Screenshot 2026-10-18 at 9 39 25 PM" src="https://github.com/user-attachments/assets/a4efe2ff-1672-4f01-ac18-929d9d0aee1d" />
 Where A is the contour’s area and P is its perimeter. The closer the shape is to a circle, the more the roundness value approaches 1.
 
-Aspect ratio is calculated as:
-<img width="123" height="86" alt="Screenshot 2026-10-18 at 9 40 10 PM" src="https://github.com/user-attachments/assets/b744fe3c-01f9-4182-a397-eacfd8d4b987" />
+Aspect ratio is calculated as:\
+<img width="123" height="86" alt="Screenshot 2026-10-18 at 9 40 10 PM" src="https://github.com/user-attachments/assets/b744fe3c-01f9-4182-a397-eacfd8d4b987" />\
 Where W and H are the width and height of the contour’s bounding rectangle.
 
 These features represent different visual properties that may help distinguish barnacles from their surroundings. Barnacles have visible rims and a distinct shape. The background may differ in brightness and color, among others.
