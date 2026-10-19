@@ -63,8 +63,8 @@ Since it is important to identify what features constitute a barnacle and what d
 The Getfeatures() function generates a list of 12 numerical features from each patch. The features are defined as below:
 <img width="322" height="341" alt="Screenshot 2026-10-18 at 9 37 56 PM" src="https://github.com/user-attachments/assets/3fd10144-fa85-4b9d-85ca-bd6296f0aad4" />
 
-Here, roundness is calculated as:
-<img width="186" height="76" alt="Screenshot 2026-10-18 at 9 39 25 PM" src="https://github.com/user-attachments/assets/a4efe2ff-1672-4f01-ac18-929d9d0aee1d" />
+Here, roundness is calculated as:\
+<img width="186" height="76" alt="Screenshot 2026-10-18 at 9 39 25 PM" src="https://github.com/user-attachments/assets/a4efe2ff-1672-4f01-ac18-929d9d0aee1d" />\
 Where A is the contour’s area and P is its perimeter. The closer the shape is to a circle, the more the roundness value approaches 1.
 
 Aspect ratio is calculated as:\
