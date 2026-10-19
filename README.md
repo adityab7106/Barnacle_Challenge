@@ -50,6 +50,20 @@ I utilized four evaluation metrics: accuracy, precision, recall, and F1 score. A
 These metrics are practical to calculate because the given annotation masks allow me to generate labels without needing to manually label every patch. However, these metrics do have a limitation. They only measure patch classification performance, not the accuracy of counting every barnacle in the entire image. Thus, if there are unannotated barnacles, they might get labeled as a background patch, introducing potential errors in the model. 
 
 ## The Prototype
+The prototype is implemented in Python using OpenCV for image processing, NumPy for numerical operations, and scikit-learn for machine learning and acquiring evaluation metrics.
+
+The getdata() function loads each photograph and its respective annotation mask. It ensures that both files exist and that their dimensions are the same. The selectRoi() function allows the user to select the region of interest in the photograph. 
+
+The find_barnacles() function identifies the blue pixels in the annotation mask using color thresholds. OpenCV then identifies connected contours in the resulting binary image. Contours smaller than 3 pixels are discarded as the likelihood of them representing a barnacle is very low. The center of each remaining contour is used as the location of an annotated barnacle.
+
+The build_dataset() function checks whether each annotated barnacle is within the region of interest and has enough surrounding image area to form a complete patch. If it does, the program extracts a rectangular 40x40 pixel patch centered on the barnacle and labels it as positive, represented by a 1. 
+
+Since it is important to identify what features constitute a barnacle and what does not, the program also generates negative samples by randomly selecting patches inside the region of interest and represents them by a 0. However, it rejects a patch if it overlaps with any blue annotation pixels, since the patch may contain parts of a barnacle. The program tries to collect the same number of negative patches as positive patches. Doing so results in a balanced dataset where there is an equal amount of barnacle and background examples.
+
+The Getfeatures() function generates a list of 12 numerical features from each patch. The features are defined as below:
+<img width="322" height="341" alt="Screenshot 2026-10-18 at 9 37 56 PM" src="https://github.com/user-attachments/assets/3fd10144-fa85-4b9d-85ca-bd6296f0aad4" />
+
+Here, roundness is calculated as:
 
 
 
