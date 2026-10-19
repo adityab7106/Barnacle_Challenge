@@ -92,9 +92,9 @@ Predicted barnacle patches: 322
 
 Since the metrics depend on the user-selected region of interest, they may vary slightly in each run. The above metrics are reported based on the best-performing run.
 
-<img width="557" height="199" alt="Screenshot 2026-10-18 at 9 47 04 PM" src="https://github.com/user-attachments/assets/62f897c0-6247-43ed-924c-109b1e1d764f" />\
+<img width="557" height="199" alt="Screenshot 2026-10-18 at 9 47 04 PM" src="https://github.com/user-attachments/assets/62f897c0-6247-43ed-924c-109b1e1d764f" />
 
-The confusion matrix is as follows:
+The confusion matrix is as follows:\
 <img width="626" height="100" alt="Screenshot 2026-10-18 at 9 47 48 PM" src="https://github.com/user-attachments/assets/7e1bed44-754e-45d1-8586-db9d661b4a79" />
 
 Where,\
