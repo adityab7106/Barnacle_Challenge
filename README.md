@@ -82,15 +82,44 @@ The visualize_patches() function overlays rectangles on the original images. Gre
 <img width="500" height="500" alt="Screenshot 2026-10-18 at 8 03 54 PM" src="https://github.com/user-attachments/assets/abd9d468-70b3-40e8-9801-330c2ea590d0" />
 
 ## Analyzing Model Performance
-After testing the model on image 2, the following metrics were generated:
+After testing the model on image 2, the following metrics were generated:\
 
-Accuracy: 71%
-Precision: 75%
-Recall: 62%
-F1 Score: 68%
-Predicted barnacle patches: 322  
+Accuracy: 71%\
+Precision: 75%\
+Recall: 62%\
+F1 Score: 68%\
+Predicted barnacle patches: 322\  
 
 Since the metrics depend on the user-selected region of interest, they may vary slightly in each run. The above metrics are reported based on the best-performing run.
+
+<img width="557" height="199" alt="Screenshot 2026-10-18 at 9 47 04 PM" src="https://github.com/user-attachments/assets/62f897c0-6247-43ed-924c-109b1e1d764f" />\
+
+The confusion matrix is as follows:
+<img width="626" height="100" alt="Screenshot 2026-10-18 at 9 47 48 PM" src="https://github.com/user-attachments/assets/7e1bed44-754e-45d1-8586-db9d661b4a79" />
+
+Where,\
+True Positives are barnacle patches correctly classified as barnacles\
+True Negatives are background patches correctly classified as background\
+False Positives are background patches incorrectly classified as barnacles\
+False Negatives are barnacle patches incorrectly classified as background\
+
+The evaluation metrics are derived from the confusion matrix, which summarizes the types of errors made by the model:
+<img width="299" height="84" alt="Screenshot 2026-10-18 at 9 49 08 PM" src="https://github.com/user-attachments/assets/1c69c572-f861-492c-b3a3-5fa45410ffee" />\
+<img width="203" height="66" alt="Screenshot 2026-10-18 at 9 49 26 PM" src="https://github.com/user-attachments/assets/4b3e8d61-a1de-43a7-9a71-01e7e6980b0d" />\
+<img width="187" height="73" alt="Screenshot 2026-10-18 at 9 49 40 PM" src="https://github.com/user-attachments/assets/818e807d-e03d-478c-87a6-09938f5c7da1" />\
+<img width="253" height="64" alt="Screenshot 2026-10-18 at 9 49 56 PM" src="https://github.com/user-attachments/assets/ed3f9e24-b1f3-4b3f-b76e-ab15a8b56fa2" />\
+
+Where,\
+TP is true positive, TN is true negative, FP is false positive, and FN is false negative
+
+Overall, the model achieved reasonably promising results, with an accuracy of 71%, precision of 75%, recall of 62%, and an F1 score of 68%. These results indicate that the model based on the Random Forest Classifier is able to differentiate between barnacle patches and background patches to a reasonable extent, though there is still room for improvement. The model predicted 322 barnacle patches in the test image, though this does not necessarily represent 322 unique barnacles because multiple patches may overlap the same barnacle. One possible explanation for the model’s performance is the limited training data, as the classifier was only trained on one image. Thus, the model may not have learned to recognize the full range of variations in barnacle appearance. Training on additional annotated images could help the model generalize better to new photographs and improve the evaluation metrics.
+
+
+
+
+
+
+
 
 
 
