@@ -101,7 +101,7 @@ Where,\
 True Positives are barnacle patches correctly classified as barnacles\
 True Negatives are background patches correctly classified as background\
 False Positives are background patches incorrectly classified as barnacles\
-False Negatives are barnacle patches incorrectly classified as background\
+False Negatives are barnacle patches incorrectly classified as background
 
 The evaluation metrics are derived from the confusion matrix, which summarizes the types of errors made by the model:
 <img width="299" height="84" alt="Screenshot 2026-10-18 at 9 49 08 PM" src="https://github.com/user-attachments/assets/1c69c572-f861-492c-b3a3-5fa45410ffee" />\
