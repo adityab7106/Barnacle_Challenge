@@ -114,6 +114,21 @@ TP is true positive, TN is true negative, FP is false positive, and FN is false 
 
 Overall, the model achieved reasonably promising results, with an accuracy of 71%, precision of 75%, recall of 62%, and an F1 score of 68%. These results indicate that the model based on the Random Forest Classifier is able to differentiate between barnacle patches and background patches to a reasonable extent, though there is still room for improvement. The model predicted 322 barnacle patches in the test image, though this does not necessarily represent 322 unique barnacles because multiple patches may overlap the same barnacle. One possible explanation for the model’s performance is the limited training data, as the classifier was only trained on one image. Thus, the model may not have learned to recognize the full range of variations in barnacle appearance. Training on additional annotated images could help the model generalize better to new photographs and improve the evaluation metrics.
 
+## Conclusion
+I believe that the proposed approach is worth pursuing as an initial prototype. It shows how computer vision and machine learning can be combined to classify image patches, setting the foundation for further experimentation and improvement. The resulting model performs reasonably well across the evaluation metrics despite being trained on a single image. Thus, expanding the training data can potentially enhance the predictive capabilities of the model. The use of a Random Forest is also relatively lightweight, making it suitable for an initial project without requiring extensive computing resources. 
+
+However, the model has some limitations, and addressing them can result in better prototypes in the future. For instance, the region of interest is selected manually by tracing a 2D quadrilateral across the image. The green frame in the photograph may not be fully encapsulated due to deviations in the camera angles. Thus, future prototypes can automatically identify the region of interest by tracing the green pixels in the photographs.
+
+Additionally, the evaluation metrics currently being employed rely on tracing the contours of the provided annotated masks. There is a chance that multiple barnacles are grouped together in the contour, lessening the effectiveness of the baseline. Thus, future prototypes can evaluate the detected barnacles against human-verified counts for better evaluation reliability.
+
+## Learning Process
+I had a really great time working on this project. The project gave me the opportunity to learn how computer vision and machine learning can be applied to solve a practical problem. Before developing the prototype, I learned more about OpenCV and how it can be utilized to extract useful information from the image. I learned about contours, shape characteristics, and color intensities that can be helpful in extracting numerical information from the image.
+
+While I had prior experience with machine learning, I had limited understanding of developing models based on features extracted from images. After reading some articles and watching educational videos, I gained the tools necessary for completing the project. I had a fun time experimenting with different features before deciding on a set of variables upon which to train the model. It was quite a rewarding experience watching the Random Forest Classifier make classification decisions.
+
+The project helped me realize that building a machine learning model involves much more than choosing an algorithm. Multiple factors, such as the quality of the labels, tuning parameters, and training data size, can influence the ultimate performance of the model. I also really enjoyed visualizing the sampled patches, as it made me realize the model was working correctly.
+
+All in all, I thoroughly loved working on this project and can’t wait to do more at DALI.
 
 
 
