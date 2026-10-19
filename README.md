@@ -24,4 +24,15 @@ pip install opencv-python numpy scikit-learn
 5. Allow the script to finish training and evaluation. It will print the evaluation metrics, including accuracy, precision, recall, and F1 score, and display visualizations of the positive and negative patches
 
 ## Brainstorming
+Scientists studying marine ecosystems often need to count barnacles in photographs, which can shed important information regarding the health of the ecosystem. However, manually counting hundreds or thousands of barnacles in a single image can be really time-consuming. Thus, I propose developing a computer vision system that identifies barnacles in photographs and runs a Random Forest Classifier to estimate their abundance within the desired sampling area (the green frame). The OpenCV library can be utilized to detect patches containing individual barnacles in the image and extract features to help train the machine learning model. The model can then be implemented on the testing data and evaluated to determine its effectiveness.   
+
+## Identifying subtasks
+Deploying an effective barnacle detection system hinges on several important subtasks, as identified below:
+
+- **Subtask 1: Selecting the Sampling Region**
+  The system must be able to identify the region of interest where the barnacles are to be counted. In this project, that region is the inner square of the green frame. In this prototype, the user manually selects the interior of the green frame in each photograph. The input is the original image, and the output is a rectangular region of interest (ROI).
+- **Subtask 2: Generate Training Labels**
+  A machine learning model needs examples of both barnacles and background to learn how to distinguish between them. The provided images include mask images with blue outlines that identify barnacle locations. The system locates the center of each annotated barnacle and takes a small image patch around it as a positive example. It also samples patches from other locations (avoiding the patches that overlap with blue outlines) to create negative examples. The output is a labeled dataset of image patches.   
+
+
 
