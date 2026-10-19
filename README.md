@@ -82,13 +82,13 @@ The visualize_patches() function overlays rectangles on the original images. Gre
 <img width="500" height="500" alt="Screenshot 2026-10-18 at 8 03 54 PM" src="https://github.com/user-attachments/assets/abd9d468-70b3-40e8-9801-330c2ea590d0" />
 
 ## Analyzing Model Performance
-After testing the model on image 2, the following metrics were generated:\
+After testing the model on image 2, the following metrics were generated:
 
 Accuracy: 71%\
 Precision: 75%\
 Recall: 62%\
 F1 Score: 68%\
-Predicted barnacle patches: 322\  
+Predicted barnacle patches: 322  
 
 Since the metrics depend on the user-selected region of interest, they may vary slightly in each run. The above metrics are reported based on the best-performing run.
 
