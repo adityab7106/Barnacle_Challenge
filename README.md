@@ -107,7 +107,7 @@ The evaluation metrics are derived from the confusion matrix, which summarizes t
 <img width="299" height="84" alt="Screenshot 2026-10-18 at 9 49 08 PM" src="https://github.com/user-attachments/assets/1c69c572-f861-492c-b3a3-5fa45410ffee" />\
 <img width="203" height="66" alt="Screenshot 2026-10-18 at 9 49 26 PM" src="https://github.com/user-attachments/assets/4b3e8d61-a1de-43a7-9a71-01e7e6980b0d" />\
 <img width="187" height="73" alt="Screenshot 2026-10-18 at 9 49 40 PM" src="https://github.com/user-attachments/assets/818e807d-e03d-478c-87a6-09938f5c7da1" />\
-<img width="253" height="64" alt="Screenshot 2026-10-18 at 9 49 56 PM" src="https://github.com/user-attachments/assets/ed3f9e24-b1f3-4b3f-b76e-ab15a8b56fa2" />\
+<img width="253" height="64" alt="Screenshot 2026-10-18 at 9 49 56 PM" src="https://github.com/user-attachments/assets/ed3f9e24-b1f3-4b3f-b76e-ab15a8b56fa2" />
 
 Where,\
 TP is true positive, TN is true negative, FP is false positive, and FN is false negative
